@@ -4,7 +4,7 @@ This is a simple browser-based tool that converts QR codes into 3D-printable STL
 It uses `three.js` to render the model and exports clean geometry you can slice and print.
 
 👉 **Live site:**  
-[https://lepari23.github.io/qr-to-stl-generator](https://lepari23.github.io/QR-Code-STL-Generator)
+[https://lepari23.github.io/QR-Code-STL-Generator](https://lepari23.github.io/QR-Code-STL-Generator)
 
 ---
 
