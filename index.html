@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>QR-to-STL Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Import-map so “three” resolves inside example modules -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header><h1>QR-to-STL Generator</h1></header>
+
+    <main class="layout">
+      <!-- Viewer LEFT -->
+      <div class="viewer-box"><canvas id="viewer"></canvas></div>
+
+      <!-- Controls RIGHT -->
+      <aside class="controls">
+        <label class="control-block"
+          >Data to encode
+          <textarea
+            id="qr-data"
+            rows="3"
+            placeholder="https://example.com"
+          ></textarea>
+        </label>
+
+        <label class="control-block"
+          >Error Correction
+          <select id="qr-ecc">
+            <option value="L">L - 7 %</option>
+            <option value="M" selected>M - 15 %</option>
+            <option value="Q">Q - 25 %</option>
+            <option value="H">H - 30 %</option>
+          </select>
+        </label>
+
+        <label class="control-block"
+          >Version (size)
+          <select id="qr-version"></select>
+        </label>
+
+        <label class="control-block"
+          >Units
+          <select id="units">
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>
+            <option value="in">in</option>
+          </select>
+        </label>
+
+        <label class="control-block"
+          >Plate width / height
+          <input id="plate-size" type="number" min="10" step="1" value="40" />
+        </label>
+
+        <label class="control-block"
+          >Extrusion depth
+          <input id="depth" type="number" min="1" step="0.5" value="2" />
+        </label>
+
+        <label class="control-block">
+          <input type="checkbox" id="add-base" checked /> Add base plate
+        </label>
+
+        <label class="control-block"
+          >Base border scale (≥ 1)
+          <input
+            id="base-scale"
+            type="number"
+            min="1"
+            step="0.05"
+            value="1.1"
+          />
+        </label>
+
+        <label class="control-block"
+          >Base thickness
+          <input id="base-depth" type="number" min="0.5" step="0.5" value="1" />
+        </label>
+
+        <button id="generate">Update Preview</button>
+        <button id="download">Download STL</button>
+      </aside>
+    </main>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
