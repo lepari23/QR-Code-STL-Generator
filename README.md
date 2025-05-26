@@ -6,8 +6,6 @@ It uses `three.js` to render the model and exports clean geometry you can slice 
 👉 **Live site:**  
 [https://lepari23.github.io/QR-Code-STL-Generator](https://lepari23.github.io/QR-Code-STL-Generator)
 
----
-
 ## 🧩 Features
 
 - **Input custom data** to encode as a QR code (e.g. URLs, text, etc.)
@@ -23,8 +21,6 @@ It uses `three.js` to render the model and exports clean geometry you can slice 
 - **Download clean ASCII STL** files
   - Filenames include dimensions and units for easy tracking
 
----
-
 ## 🛠 Tech Stack
 
 - Vanilla JS + ES Modules
@@ -32,21 +28,15 @@ It uses `three.js` to render the model and exports clean geometry you can slice 
 - [`qrcode-generator`](https://github.com/kazuhikoarase/qrcode-generator)
 - No bundler, framework, or install needed — runs 100% client-side
 
----
-
 ## 🚧 Limitations
 
 - Supports **QR version 1–10** (the full spec goes up to 40)
 - Long or complex text may **exceed the selected version**
   - You’ll get a helpful popup if this happens
 
----
-
 ## 💡 Contributing
 
 If you have ideas, bug reports, or want to request features, please [open an issue](https://github.com/lepari23/QR-Code-STL-Generator/issues).  
-
----
 
 ## 📄 License
 
